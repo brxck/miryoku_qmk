@@ -22,6 +22,12 @@ KC_LSFT,           KC_4,              KC_5,              KC_6,             KC_G,
 KC_LCTL,           KC_7,              KC_8,              KC_9,             KC_B,             KC_BSLS,          KC_F1,            KC_F2,            KC_F3,             KC_GRAVE,        \
 U_NP,              U_NP,              DF(U_BASE),        KC_SPC,           KC_NO,            KC_MINUS,         KC_0,             KC_DOT,           U_NP,              U_NP
 
+#define MIRYOKU_LAYER_FUN \
+KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR,           U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),     \
+KC_F11,            KC_F4,             KC_F5,             KC_F6,             KC_SCRL,           U_NA,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
+KC_F10,            KC_F1,             KC_F2,             KC_F3,             KC_PAUS,           U_NA,              TD(U_TD_U_FUN),    TD(U_TD_U_MEDIA),  DF(U_GAME),        DF(U_BASE),        \
+U_NP,              U_NP,              KC_APP,            KC_SPC,            KC_TAB,            U_NA,              U_NA,              U_NA,              U_NP,              U_NP
+
 #define MIRYOKU_LAYER_LIST \
 MIRYOKU_X(BASE,   "Base") \
 MIRYOKU_X(EXTRA,  "Extra") \
@@ -36,28 +42,5 @@ MIRYOKU_X(FUN,    "Fun") \
 MIRYOKU_X(GAME,   "Game") \
 MIRYOKU_X(GAMENUM,"GNum")
 
-#define MIRYOKU_LAYERMAPPING_BASE( \
-      K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09, \
-      K10,  K11,  K12,  K13,  K14,         K15,  K16,  K17,  K18,  K19, \
-      K20,  K21,  K22,  K23,  K24,         K25,  K26,  K27,  K28,  K29, \
-      N30,  N31,  K32,  K33,  K34,         K35,  K36,  K37,  N38,  N39 \
-) \
-LAYOUT_split_3x6_3( \
-XXX,  K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09,  DF(U_GAME), \
-XXX,  K10,  K11,  K12,  K13,  K14,         K15,  K16,  K17,  K18,  K19,  XXX, \
-XXX,  K20,  K21,  K22,  K23,  K24,         K25,  K26,  K27,  K28,  K29,  XXX , \
-                  K32,  K33,  K34,         K35,  K36,  K37 \
-)
-#define MIRYOKU_LAYERMAPPING_GAME( \
-      K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09, \
-      K10,  K11,  K12,  K13,  K14,         K15,  K16,  K17,  K18,  K19, \
-      K20,  K21,  K22,  K23,  K24,         K25,  K26,  K27,  K28,  K29, \
-      N30,  N31,  K32,  K33,  K34,         K35,  K36,  K37,  N38,  N39 \
-) \
-LAYOUT_split_3x6_3( \
-XXX,  K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09,  DF(U_BASE), \
-XXX,  K10,  K11,  K12,  K13,  K14,         K15,  K16,  K17,  K18,  K19,  XXX, \
-XXX,  K20,  K21,  K22,  K23,  K24,         K25,  K26,  K27,  K28,  K29,  XXX , \
-                  K32,  K33,  K34,         K35,  K36,  K37 \
-)
+#define MIRYOKU_LAYERMAPPING_GAME MIRYOKU_MAPPING
 #define MIRYOKU_LAYERMAPPING_GAMENUM MIRYOKU_MAPPING
